@@ -12,7 +12,8 @@
 		46424BFC1C48AF290051F444 /* gstreamerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46424BFB1C48AF290051F444 /* gstreamerTests.m */; };
 		46424C081C48B25F0051F444 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 46424C061C48B25F0051F444 /* LICENSE */; };
 		464250CA1C48B9870051F444 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 46424C071C48B25F0051F444 /* README.md */; };
-		464250CE1C48BEC90051F444 /* usr in Resources */ = {isa = PBXBuildFile; fileRef = 464250CD1C48BEC90051F444 /* usr */; };
+		464255261C48D8A60051F444 /* include in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4642550A1C48CBDC0051F444 /* include */; };
+		464255271C48D8A90051F444 /* lib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 464250D01C48C2EC0051F444 /* lib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +25,20 @@
 			remoteInfo = "gstreamer-osx";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		464255251C48D89A0051F444 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 1;
+			files = (
+				464255261C48D8A60051F444 /* include in CopyFiles */,
+				464255271C48D8A90051F444 /* lib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		46424BEC1C48AF290051F444 /* gstreamer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = gstreamer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,7 +52,9 @@
 		464250C21C48B6CE0051F444 /* gstreamer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = gstreamer.xcconfig; sourceTree = "<group>"; };
 		464250CB1C48BA5A0051F444 /* rpathize.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = rpathize.js; sourceTree = "<group>"; };
 		464250CC1C48BB070051F444 /* CopyLibs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = CopyLibs.sh; sourceTree = "<group>"; };
-		464250CD1C48BEC90051F444 /* usr */ = {isa = PBXFileReference; lastKnownFileType = folder; path = usr; sourceTree = "<group>"; };
+		464250D01C48C2EC0051F444 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
+		4642550A1C48CBDC0051F444 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
+		464255291C48E2830051F444 /* gstreamerTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = gstreamerTests.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +84,7 @@
 				464250C11C48B6A00051F444 /* Build */,
 				46424BEE1C48AF290051F444 /* gstreamer */,
 				46424BFA1C48AF290051F444 /* gstreamerTests */,
-				464250CD1C48BEC90051F444 /* usr */,
+				464250CF1C48C2D20051F444 /* usr */,
 				46424BED1C48AF290051F444 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,8 +122,18 @@
 				464250CB1C48BA5A0051F444 /* rpathize.js */,
 				464250CC1C48BB070051F444 /* CopyLibs.sh */,
 				464250C21C48B6CE0051F444 /* gstreamer.xcconfig */,
+				464255291C48E2830051F444 /* gstreamerTests.xcconfig */,
 			);
 			path = Build;
+			sourceTree = "<group>";
+		};
+		464250CF1C48C2D20051F444 /* usr */ = {
+			isa = PBXGroup;
+			children = (
+				4642550A1C48CBDC0051F444 /* include */,
+				464250D01C48C2EC0051F444 /* lib */,
+			);
+			path = usr;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +158,7 @@
 				46424BE81C48AF290051F444 /* Frameworks */,
 				46424BE91C48AF290051F444 /* Headers */,
 				46424BEA1C48AF290051F444 /* Resources */,
+				464255251C48D89A0051F444 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -148,6 +176,7 @@
 				46424BF21C48AF290051F444 /* Sources */,
 				46424BF31C48AF290051F444 /* Frameworks */,
 				46424BF41C48AF290051F444 /* Resources */,
+				4642552A1C48EB220051F444 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -199,7 +228,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				464250CE1C48BEC90051F444 /* usr in Resources */,
 				46424C081C48B25F0051F444 /* LICENSE in Resources */,
 				464250CA1C48B9870051F444 /* README.md in Resources */,
 			);
@@ -213,6 +241,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4642552A1C48EB220051F444 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ls -l $";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		46424BE71C48AF290051F444 /* Sources */ = {
@@ -243,7 +287,6 @@
 /* Begin XCBuildConfiguration section */
 		46424BFE1C48AF290051F444 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 464250C21C48B6CE0051F444 /* gstreamer.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -290,7 +333,6 @@
 		};
 		46424BFF1C48AF290051F444 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 464250C21C48B6CE0051F444 /* gstreamer.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -330,6 +372,7 @@
 		};
 		46424C011C48AF290051F444 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 464250C21C48B6CE0051F444 /* gstreamer.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -352,6 +395,7 @@
 		};
 		46424C021C48AF290051F444 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 464250C21C48B6CE0051F444 /* gstreamer.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -374,6 +418,7 @@
 		};
 		46424C041C48AF290051F444 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 464255291C48E2830051F444 /* gstreamerTests.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = gstreamerTests/Info.plist;
@@ -385,6 +430,7 @@
 		};
 		46424C051C48AF290051F444 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 464255291C48E2830051F444 /* gstreamerTests.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = gstreamerTests/Info.plist;
