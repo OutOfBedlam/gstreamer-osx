@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface gstreamer_osxTests : XCTestCase
+@interface gstreamerTests : XCTestCase
 
 @end
 
-@implementation gstreamer_osxTests
+@implementation gstreamerTests
 
 - (void)setUp {
     [super setUp];

@@ -11,7 +11,8 @@
 		46424BF71C48AF290051F444 /* gstreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46424BEC1C48AF290051F444 /* gstreamer.framework */; };
 		46424BFC1C48AF290051F444 /* gstreamerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46424BFB1C48AF290051F444 /* gstreamerTests.m */; };
 		46424C081C48B25F0051F444 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 46424C061C48B25F0051F444 /* LICENSE */; };
-		46424C091C48B25F0051F444 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 46424C071C48B25F0051F444 /* README.md */; };
+		464250CA1C48B9870051F444 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 46424C071C48B25F0051F444 /* README.md */; };
+		464250CE1C48BEC90051F444 /* usr in Resources */ = {isa = PBXBuildFile; fileRef = 464250CD1C48BEC90051F444 /* usr */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,10 @@
 		46424BFD1C48AF290051F444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46424C061C48B25F0051F444 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		46424C071C48B25F0051F444 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		464250C21C48B6CE0051F444 /* gstreamer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = gstreamer.xcconfig; sourceTree = "<group>"; };
+		464250CB1C48BA5A0051F444 /* rpathize.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = rpathize.js; sourceTree = "<group>"; };
+		464250CC1C48BB070051F444 /* CopyLibs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = CopyLibs.sh; sourceTree = "<group>"; };
+		464250CD1C48BEC90051F444 /* usr */ = {isa = PBXFileReference; lastKnownFileType = folder; path = usr; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +62,13 @@
 		46424BE21C48AF290051F444 = {
 			isa = PBXGroup;
 			children = (
-				46424BEE1C48AF290051F444 /* gstreamer */,
-				46424BFA1C48AF290051F444 /* gstreamerTests */,
-				46424BED1C48AF290051F444 /* Products */,
 				46424C061C48B25F0051F444 /* LICENSE */,
 				46424C071C48B25F0051F444 /* README.md */,
+				464250C11C48B6A00051F444 /* Build */,
+				46424BEE1C48AF290051F444 /* gstreamer */,
+				46424BFA1C48AF290051F444 /* gstreamerTests */,
+				464250CD1C48BEC90051F444 /* usr */,
+				46424BED1C48AF290051F444 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +97,16 @@
 				46424BFD1C48AF290051F444 /* Info.plist */,
 			);
 			path = gstreamerTests;
+			sourceTree = "<group>";
+		};
+		464250C11C48B6A00051F444 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				464250CB1C48BA5A0051F444 /* rpathize.js */,
+				464250CC1C48BB070051F444 /* CopyLibs.sh */,
+				464250C21C48B6CE0051F444 /* gstreamer.xcconfig */,
+			);
+			path = Build;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +199,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464250CE1C48BEC90051F444 /* usr in Resources */,
 				46424C081C48B25F0051F444 /* LICENSE in Resources */,
+				464250CA1C48B9870051F444 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +219,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46424C091C48B25F0051F444 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +243,7 @@
 /* Begin XCBuildConfiguration section */
 		46424BFE1C48AF290051F444 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 464250C21C48B6CE0051F444 /* gstreamer.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -260,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -271,6 +290,7 @@
 		};
 		46424BFF1C48AF290051F444 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 464250C21C48B6CE0051F444 /* gstreamer.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -300,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -320,6 +340,10 @@
 				INFOPLIST_FILE = gstreamer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.x3.gstreamer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -338,6 +362,10 @@
 				INFOPLIST_FILE = gstreamer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.x3.gstreamer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
