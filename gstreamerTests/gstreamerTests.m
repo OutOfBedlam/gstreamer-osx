@@ -5,9 +5,9 @@
 //  Created by Eirny on 1/15/16.
 //  Copyright © 2016 Yet Reader Forge. All rights reserved.
 //
+#import <gstreamer/gstreamer.h>
 
 #import <XCTest/XCTest.h>
-#import <gst/gst.h>
 
 @interface gstreamerTests : XCTestCase
 

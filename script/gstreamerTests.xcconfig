@@ -12,6 +12,9 @@
 HEADER_SEARCH_PATHS = $CONFIGURATION_BUILD_DIR/gstreamer.framework/include/glib-2.0 $CONFIGURATION_BUILD_DIR/gstreamer.framework/include/gstreamer-1.0
 LIBRARY_SEARCH_PATHS = $CONFIGURATION_BUILD_DIR/gstreamer.framework/lib
 
+// this flag is not working in xcconfig file, set in xcode project attribute for work-around
+//CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = Yes
+
 ////////////////////////////
 // LDFlags
 

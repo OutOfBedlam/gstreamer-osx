@@ -28,10 +28,8 @@ GST_VORBIS = -lvorbis.0 -lvorbisenc.2.dylib
 
 GST_AUDIO_LIB = $(GST_AAC) $(GST_FLAC) $(GST_MPG123) $(GST_OPUS) $(GST_DTS)
 
-// Sum
-GSTREAMER_LIB = $(GLIB_BASE) $(GST_BASE) $(GST_CONT_LIB) $(GST_AUDIO_LIB)
-
-
 //////////////////////////////////////////
 // Final LD flags
-GSTREAMER_LDFLAGS = $(GSTREAMER_LIB)
+GSTREAMER_LDFLAGS = $(GLIB_BASE) $(GST_BASE) $(GST_CONT_LIB) $(GST_AUDIO_LIB)
+
+
