@@ -1,0 +1,32 @@
+//
+//  gstreamer.xcconfig
+//  gstreamer-osx
+//
+//  Created by Eirny on 1/15/16.
+//  Copyright © 2016 Yet Reader Forge. All rights reserved.
+//
+
+
+////////////////////////////
+// Search Paths
+HEADER_SEARCH_PATH_GLIB = $(SRCROOT)/usr/include/glib-2.0 $(SRCROOT)/usr/lib/glib-2.0/include
+HEADER_SEARCH_PATH_GST  = $(SRCROOT)/usr/include/gstreamer-1.0  $(SRCROOT)/usr/lib/gstreamer-1.0/include
+
+HEADER_SEARCH_PATHS = $(HEADER_SEARCH_PATH_GLIB) $(HEADER_SEARCH_PATH_GST)
+LIBRARY_SEARCH_PATHS = $(SRCROOT)/usr/lib $(SRCROOT)/usr/lib/gstreamer-1.0
+
+
+///////////////////////////////////////
+// Core frameworks
+FRAMEWORKS_F = -framework Cocoa -framework Foundation -framework AppKit -framework QuartzCore
+FRAMEWORKS_A = -framework CoreAudio -framework AudioToolbox -framework AudioUnit
+
+FRAMEWORKS = $(FRAMEWORKS_F) $(FRAEWORKS_A)
+
+////////////////////////////
+// LDFlags
+
+#include "gstreamerCommon.xcconfig"
+
+OTHER_LDFLAGS = $(FRAMEWORKS) $(GSTREAMER_LDFLAGS)
+

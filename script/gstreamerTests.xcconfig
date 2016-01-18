@@ -1,0 +1,20 @@
+//
+//  gstreamerTest.xcconfig
+//  gstreamer-osx
+//
+//  Created by Eirny on 1/15/16.
+//  Copyright © 2016 Yet Reader Forge. All rights reserved.
+//
+
+////////////////////////////
+// Search Paths
+
+HEADER_SEARCH_PATHS = $CONFIGURATION_BUILD_DIR/gstreamer.framework/include/glib-2.0 $CONFIGURATION_BUILD_DIR/gstreamer.framework/include/gstreamer-1.0
+LIBRARY_SEARCH_PATHS = $CONFIGURATION_BUILD_DIR/gstreamer.framework/lib
+
+////////////////////////////
+// LDFlags
+
+#include "gstreamerCommon.xcconfig"
+
+OTHER_LDFLAGS = -framework gstreamer -rpath $CONFIGURATION_BUILD_DIR $(GSTREAMER_LDFLAGS)

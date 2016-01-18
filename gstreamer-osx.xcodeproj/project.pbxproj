@@ -55,6 +55,7 @@
 		464250D01C48C2EC0051F444 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
 		4642550A1C48CBDC0051F444 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
 		464255291C48E2830051F444 /* gstreamerTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = gstreamerTests.xcconfig; sourceTree = "<group>"; };
+		46E469801C4C6E40003FA029 /* gstreamerCommon.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = gstreamerCommon.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +82,9 @@
 			children = (
 				46424C061C48B25F0051F444 /* LICENSE */,
 				46424C071C48B25F0051F444 /* README.md */,
-				464250C11C48B6A00051F444 /* Build */,
 				46424BEE1C48AF290051F444 /* gstreamer */,
 				46424BFA1C48AF290051F444 /* gstreamerTests */,
+				46E818971C4C72D00000AE3B /* script */,
 				464250CF1C48C2D20051F444 /* usr */,
 				46424BED1C48AF290051F444 /* Products */,
 			);
@@ -116,17 +117,6 @@
 			path = gstreamerTests;
 			sourceTree = "<group>";
 		};
-		464250C11C48B6A00051F444 /* Build */ = {
-			isa = PBXGroup;
-			children = (
-				464250CB1C48BA5A0051F444 /* rpathize.js */,
-				464250CC1C48BB070051F444 /* CopyLibs.sh */,
-				464250C21C48B6CE0051F444 /* gstreamer.xcconfig */,
-				464255291C48E2830051F444 /* gstreamerTests.xcconfig */,
-			);
-			path = Build;
-			sourceTree = "<group>";
-		};
 		464250CF1C48C2D20051F444 /* usr */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +124,18 @@
 				464250D01C48C2EC0051F444 /* lib */,
 			);
 			path = usr;
+			sourceTree = "<group>";
+		};
+		46E818971C4C72D00000AE3B /* script */ = {
+			isa = PBXGroup;
+			children = (
+				464250CB1C48BA5A0051F444 /* rpathize.js */,
+				464250CC1C48BB070051F444 /* CopyLibs.sh */,
+				464250C21C48B6CE0051F444 /* gstreamer.xcconfig */,
+				464255291C48E2830051F444 /* gstreamerTests.xcconfig */,
+				46E469801C4C6E40003FA029 /* gstreamerCommon.xcconfig */,
+			);
+			path = script;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +178,6 @@
 				46424BF21C48AF290051F444 /* Sources */,
 				46424BF31C48AF290051F444 /* Frameworks */,
 				46424BF41C48AF290051F444 /* Resources */,
-				4642552A1C48EB220051F444 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -241,22 +242,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4642552A1C48EB220051F444 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "ls -l $";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		46424BE71C48AF290051F444 /* Sources */ = {

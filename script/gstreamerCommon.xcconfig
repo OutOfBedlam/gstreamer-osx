@@ -1,0 +1,37 @@
+//
+//  gstreamerCommon.xcconfig
+//  gstreamer-osx
+//
+//  Created by Eirny on 1/18/16.
+//  Copyright © 2016 Yet Reader Forge. All rights reserved.
+//
+
+////////////////////////////
+// Other Link Flags
+
+GLIB_BASE = -lglib-2.0.0 -lgio-2.0.0 -lgobject-2.0.0 -lgmodule-2.0.0 -lgthread-2.0.0 -lintl.8 -liconv.2 -lorc-0.4.0 -lorc-test-0.4.0 -lffi.6 -lz.1
+GST_BASE = -lgstreamer-1.0.0 -lgstbase-1.0.0 -lgstbadbase-1.0.0 -lgstaudio-1.0.0 -lgstpbutils-1.0.0 -lgstriff-1.0.0 -lgsttag-1.0.0 -lgstcodecparsers-1.0.0
+
+// Containers and etc
+GST_OGG = -logg.0
+GST_TAG = -ltag.1
+
+GST_CONT_LIB = $(GST_OGG) $(GST_TAG)
+
+// Audio Codec
+GST_AAC = -lfaad.2
+GST_FLAC = -lFLAC.8
+GST_DTS = -ldca.0
+GST_MPG123 = -lmpg123.0
+GST_OPUS = -lopus.0
+GST_VORBIS = -lvorbis.0 -lvorbisenc.2.dylib
+
+GST_AUDIO_LIB = $(GST_AAC) $(GST_FLAC) $(GST_MPG123) $(GST_OPUS) $(GST_DTS)
+
+// Sum
+GSTREAMER_LIB = $(GLIB_BASE) $(GST_BASE) $(GST_CONT_LIB) $(GST_AUDIO_LIB)
+
+
+//////////////////////////////////////////
+// Final LD flags
+GSTREAMER_LDFLAGS = $(GSTREAMER_LIB)
